@@ -1,43 +1,79 @@
-# Astro Starter Kit: Minimal
+# Awesome Linktree
 
-```sh
-npm create astro@latest -- --template minimal
+Este repositorio te permite crear tu propia página de enlaces al estilo Linktree, utilizando archivos Markdown y personalizándolo fácilmente. A continuación encontrarás los pasos para hacer un fork, los prerequisitos, la configuración y cómo añadir tus propios enlaces e iconos.
+
+---
+
+## 1. Haz un Fork del Repositorio
+
+Haz clic en el botón **Fork** en la parte superior derecha de esta página para crear una copia de este repositorio en tu cuenta de GitHub.
+
+---
+
+## 2. Prerrequisitos
+
+- Tener una cuenta en GitHub.
+- Conocimientos básicos de edición de archivos Markdown (`.md`).
+- Opcional: Saber hacer deploy en GitHub Pages para publicar tu Linktree.
+
+---
+
+## 3. Configuración Inicial
+
+### a. Clona tu Fork
+
+```bash
+git clone https://github.com/tu-usuario/awesome-linktree.git
+cd awesome-linktree
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### b. Personaliza tu Información
 
-## 🚀 Project Structure
+1. **Edita el archivo `profile/you.md`**  
+   Este archivo es tu tarjeta de presentación. Aquí puedes poner tu nombre, una breve biografía, foto, etc. Ábrelo y reemplaza los datos de ejemplo por los tuyos.
 
-Inside of your Astro project, you'll see the following folders and files:
+2. **Agrega tus Enlaces**
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+   - Para cada enlace, crea un archivo nuevo `.md` basado en el archivo `link-template.md` en la carpeta `content/links`.
+   - Renombra el archivo para que tenga sentido (por ejemplo, `github.md`, `twitter.md`, etc).
+   - Completa los campos del template con la información de tu enlace: título, URL, descripción, e ícono.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+   **Ejemplo:**
+   ```markdown
+   ---
+   title: GitHub
+   url: https://github.com/tu-usuario
+   icon: mdi:github
+   description: ¡Sígueme en GitHub!
+   ---
+   ```
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+---
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 4. Añadir Iconos
 
-## 🧞 Commands
+Los iconos se obtienen desde [Iconify - Material Design Icons](https://icon-sets.iconify.design/mdi/).
 
-All commands are run from the root of the project, from a terminal:
+- Busca el icono que deseas usar.
+- Copia el nombre del icono (por ejemplo, `mdi:twitter`).
+- Pega ese nombre en el campo `icon` de tu archivo `.md`.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## 5. Publicar tu Linktree (Opcional)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Si quieres publicar tu Linktree, puedes usar **GitHub Pages**:
+
+1. Ve a la configuración de tu repositorio (`Settings > Pages`).
+2. Selecciona la rama principal y la carpeta `/root` o `/docs` según tu setup.
+3. ¡Listo! Tendrás tu Linktree online en la URL de GitHub Pages.
+
+---
+
+## 6. Créditos
+
+Iconos por [Iconify](https://icon-sets.iconify.design/mdi/).
+
+---
+
+¡Personaliza, comparte y haz crecer tu árbol de enlaces!
