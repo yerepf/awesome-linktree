@@ -1,79 +1,79 @@
 # Awesome Linktree
 
-Este repositorio te permite crear tu propia página de enlaces al estilo Linktree, utilizando archivos Markdown y personalizándolo fácilmente. A continuación encontrarás los pasos para hacer un fork, los prerequisitos, la configuración y cómo añadir tus propios enlaces e iconos.
+This repository lets you create your own Linktree-style links page using Markdown files, making it easy to personalize and manage your links. Below you'll find steps for forking the repo, prerequisites, setup, and how to add your own links and icons.
 
 ---
 
-## 1. Haz un Fork del Repositorio
+## 1. Fork the Repository
 
-Haz clic en el botón **Fork** en la parte superior derecha de esta página para crear una copia de este repositorio en tu cuenta de GitHub.
-
----
-
-## 2. Prerrequisitos
-
-- Tener una cuenta en GitHub.
-- Conocimientos básicos de edición de archivos Markdown (`.md`).
-- Opcional: Saber hacer deploy en GitHub Pages para publicar tu Linktree.
+Click the **Fork** button at the top right of this page to create a copy of this repository in your GitHub account.
 
 ---
 
-## 3. Configuración Inicial
+## 2. Prerequisites
 
-### a. Clona tu Fork
+- A GitHub account.
+- Basic knowledge of editing Markdown (`.md`) files.
+- Optional: Know how to deploy with GitHub Pages to publish your Linktree.
+
+---
+
+## 3. Initial Setup
+
+### a. Clone your Fork
 
 ```bash
-git clone https://github.com/tu-usuario/awesome-linktree.git
+git clone https://github.com/your-username/awesome-linktree.git
 cd awesome-linktree
 ```
 
-### b. Personaliza tu Información
+### b. Personalize your Information
 
-1. **Edita el archivo `profile/you.md`**  
-   Este archivo es tu tarjeta de presentación. Aquí puedes poner tu nombre, una breve biografía, foto, etc. Ábrelo y reemplaza los datos de ejemplo por los tuyos.
+1. **Edit the `content/persona;/you.md` file**  
+   This file is your presentation card. Add your name, a short bio, photo, etc. Open it and replace the sample data with your own.
 
-2. **Agrega tus Enlaces**
+2. **Add your Links**
 
-   - Para cada enlace, crea un archivo nuevo `.md` basado en el archivo `link-template.md` en la carpeta `content/links`.
-   - Renombra el archivo para que tenga sentido (por ejemplo, `github.md`, `twitter.md`, etc).
-   - Completa los campos del template con la información de tu enlace: título, URL, descripción, e ícono.
+   - For each link, create a new `.md` file in `content/links` based on the `link-template.md` file.
+   - Rename your file meaningfully (for example: `github.md`, `twitter.md`, etc).
+   - Fill in the template fields with your link information: title, URL, description, and icon.
 
-   **Ejemplo:**
+   **Example:**
    ```markdown
    ---
    title: GitHub
-   url: https://github.com/tu-usuario
+   url: https://github.com/your-username
    icon: mdi:github
-   description: ¡Sígueme en GitHub!
+   description: Follow me on GitHub!
    ---
    ```
 
 ---
 
-## 4. Añadir Iconos
+## 4. Adding Icons
 
-Los iconos se obtienen desde [Iconify - Material Design Icons](https://icon-sets.iconify.design/mdi/).
+Icons are taken from [Iconify - Material Design Icons](https://icon-sets.iconify.design/mdi/).
 
-- Busca el icono que deseas usar.
-- Copia el nombre del icono (por ejemplo, `mdi:twitter`).
-- Pega ese nombre en el campo `icon` de tu archivo `.md`.
-
----
-
-## 5. Publicar tu Linktree (Opcional)
-
-Si quieres publicar tu Linktree, puedes usar **GitHub Pages**:
-
-1. Ve a la configuración de tu repositorio (`Settings > Pages`).
-2. Selecciona la rama principal y la carpeta `/root` o `/docs` según tu setup.
-3. ¡Listo! Tendrás tu Linktree online en la URL de GitHub Pages.
+- Search for the icon you want to use.
+- Copy the icon name (for example, `mdi:twitter`).
+- Paste that name into the `icon` field in your `.md` file.
 
 ---
 
-## 6. Créditos
+## 5. Publish your Linktree (Optional)
 
-Iconos por [Iconify](https://icon-sets.iconify.design/mdi/).
+If you want to publish your Linktree, you can use **GitHub Pages**:
+
+1. Go to your repository settings (`Settings > Pages`).
+2. Select the main branch and the `/root` or `/docs` folder depending on your setup.
+3. Done! Your Linktree will be online at your GitHub Pages URL.
 
 ---
 
-¡Personaliza, comparte y haz crecer tu árbol de enlaces!
+## 6. Credits
+
+Icons by [Iconify](https://icon-sets.iconify.design/mdi/).
+
+---
+
+Personalize, share, and grow your own link tree!
