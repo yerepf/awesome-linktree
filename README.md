@@ -29,12 +29,12 @@ cd awesome-linktree
 
 ### b. Personaliza tu Información
 
-1. **Edita el archivo `profile.md`**  
+1. **Edita el archivo `profile/you.md`**  
    Este archivo es tu tarjeta de presentación. Aquí puedes poner tu nombre, una breve biografía, foto, etc. Ábrelo y reemplaza los datos de ejemplo por los tuyos.
 
 2. **Agrega tus Enlaces**
 
-   - Para cada enlace, crea un archivo nuevo `.md` basado en el archivo `link-template.md`.
+   - Para cada enlace, crea un archivo nuevo `.md` basado en el archivo `link-template.md` en la carpeta `content/links`.
    - Renombra el archivo para que tenga sentido (por ejemplo, `github.md`, `twitter.md`, etc).
    - Completa los campos del template con la información de tu enlace: título, URL, descripción, e ícono.
 
