@@ -1,6 +1,6 @@
 ---
 title: Instagram
-url: https://www.instagram.com/yerepf/
+url: https://example.com
 icon: mdi:instagram
 description: "Follow me on Instagram for updates, photos, and more."
 ---
