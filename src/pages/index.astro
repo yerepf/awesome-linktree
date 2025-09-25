@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/BaseLayout.astro"
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+
+
+const links = await getCollection('links');
+const personalItems = await getCollection('personal');
+const you = personalItems[0];
+const { name, bio, avatar } = you.data;
+
+---
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		
+		<Layout>
+			<div class="personalInfo flex justify-center items-center gap-8 mt-16">
+				<img src={avatar} class="avatar w-32 rounded-full"/>
+				<div class="">
+					<h1 class="text-3xl font-bold text-center">{name}</h1>
+					<p class="text-center text-gray-400">{bio}</p>
+				</div>
+			</div>
+			<div class="links flex justify-center mt-8 flex-col gap-4">
+				{links.map(link => (
+					<a href={link.data.url} class="flex items-center justify-center gap-4 bg-gray-800 hover:bg-gray-700 p-4 rounded-xl" target="_blank" rel="noopener noreferrer">
+						<Icon name={link.data.icon} class="w-6 h-6"/>
+						
+						<span class="text-lg font-medium">{link.data.title}</span>
+						
+						<span class="hidden md:inline text-gray-400">
+							{link.data.description}
+						</span>						
+					</a>
+				))}
+			</div>
+			<div class="flex justify-center mt-8">
+				<button class="bg-blue-800 hover:bg-blue-900 text-white p-4 rounded-xl">
+					<Icon name="mdi:link-variant-plus" class="w-6 h-6 inline-block mr-2"/>
+					Build your link page
+				</button>
+			</div>
+		</Layout>
+
+		<style>
+			@media screen and (max-width: 767px) {
+				.personalInfo {
+					flex-direction: column;
+					text-align: center;
+					gap: 1em;
+				}
+				.avatar{
+					width: calc(var(--spacing) * 48);
+				}
+			}
+		</style>
+	</body>
+</html>
